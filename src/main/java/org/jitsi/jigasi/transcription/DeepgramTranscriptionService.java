@@ -41,8 +41,11 @@ public class DeepgramTranscriptionService extends AbstractTranscriptionService {
         websocketUrl = websocketUrlConfig + "?language="
                 + participant.getSourceLanguage()
                 + "&interim_results=true"
-                + "&encoding=linear16"
-                + "&sample_rate=48000";
+                + "&encoding=ogg-opus"
+                + "&punctuation=true"
+                + "&smart_formatting=true"
+                + "&model=nova-2"
+                + "&sample_rate=16000";
     }
 
     public DeepgramTranscriptionService() {
